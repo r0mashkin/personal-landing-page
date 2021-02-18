@@ -1,3 +1,119 @@
-video {
-  width: 480px;
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #95a5a6;
+  line-height: 1.6;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+/* Header */
+.header {
+  width: 100%;
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header logo */
+.header__logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Navigation */
+.nav {
+  font-size: 19px;
+  text-transform: uppercase;
+}
+
+.nav__link {
+  color: white;
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.1s linear;
+}
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #1abc9c;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.1s linear;
+}
+.nav__link:hover {
+  color: #1abc9c;
+}
+.nav__link:hover:after {
+  opacity: 1;
+}
+
+/* Intro */
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background: url("/img/mainLogo.jpeg") center no-repeat;
+  background-size: cover;
+}
+.intro_inner {
+  width: 100%;
+  max-width: 660px;
+  margin: 0 auto;
+}
+.intro__title {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+.into__title:: {
+  content: "777777";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #fff;
+}
+.intro__subtitle {
+  font-family: "Architects Daughter", cursive;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
